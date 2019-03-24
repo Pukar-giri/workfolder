@@ -1,0 +1,37 @@
+This was quite interesting it was the first time when the first idea that came to my mind was 
+the right solution to the problem and this was of course the most entertaining one to me
+
+methods used:
+directory listing using gobuster
+filebruteforce using gobuster
+webapp analysis using nikto
+*sending post request to the given address/index.php using the html form created
+
+this lead to a small form that allowed to change the username and did nothing else which was even remotely interesting
+so the next step was to check the cookie
+the cookie was base64 encoded and after decrypting it had the value as
+
+{"User":"","Admin":"False","MAC":"e64be61e59541fc7d0d3e4a207da67a7"}
+
+the basic instinct then was to change the admin value to True   
+but it came with a catch 
+changing the admin value will lead to change in the mac which will be envalid
+so we must also change the mac such that it matches whatever mac it generates
+but we donot have any information on how the mac was being generated so there was no way ahead
+
+after playing with it for a while i found about the Type jugling 
+which is just a nerdy term to an exploit technque in which the php loose equality == operator 
+tries to convert the both operands to same type before trying to perform operation on them 
+
+for example:
+		54454=="54454abcd" => True
+		more info on the pdf in same folder
+but after searching for a while i found that the string compared to a boolean True will always evaluate to true
+so 
+all i needed was to change the cookie to
+
+{"User":"","Admin":"True","MAC":true}
+
+then all that was needed was to base64 encoding of the cookie and just a plain refresh will lead us to the flag
+
+Flag:TypejugAlingSOulS

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/templater.dir/main.cpp.o CMakeFiles/templater.dir/sqlitedb.cpp.o  -o templater -lsqlite3 

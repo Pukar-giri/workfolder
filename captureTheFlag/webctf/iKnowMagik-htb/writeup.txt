@@ -1,0 +1,14 @@
+the first idea was to try basic sqlinjection techniques but certainly they wont work then tried to fuzz with the cookie without much success
+
+Correct solution :
+this problem was based on the oracle padding attack which can be exploited using the padBuster.pl script from github 
+after using the script the decrypted cookie turned out to be 
+{"user":"<username>","role":"user"}
+
+now the padbusteer was used again to get the cookie corresponding to the admin account and this was the page that gave us the flag:
+
+flag:
+
+
+PS: the pad buster script was put in the home/Mybin directory and was setup in the usr/bin directory
+

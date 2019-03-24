@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pukar/Desktop/workfolder/conceptwork/templater/main.cpp
+iostream
+-
+sqlitedb.h
+/home/pukar/Desktop/workfolder/conceptwork/templater/sqlitedb.h
+
+/home/pukar/Desktop/workfolder/conceptwork/templater/sqlitedb.h
+sqlite3.h
+-
+iostream
+-
+

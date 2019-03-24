@@ -1,0 +1,24 @@
+#!/usr/bin/pythonc
+import string
+import argparse
+from matplotlib import pyplot as plt
+
+def read(filename):
+    letters=string.ascii_letters;
+    nums=[]
+    with open(filename,"r") as infile:
+        text=infile.read();
+    for letter in letters:
+      num=len([c for c in text if c == letter])
+      nums.append(num)
+      #print (letter," =========> ",num)
+    letters=[letter for letter in letters]
+    plt.bar(letters,nums,color="red",annot=True)
+    plt.show()
+
+
+if __name__=="__main__":
+    parser=argparse.ArgumentParser()
+    parser.add_argument("filename")
+    args=parser.parse_args()
+    read(args.filename)

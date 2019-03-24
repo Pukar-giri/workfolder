@@ -1,0 +1,8 @@
+"
+_ga         =  GA1.2.1469851431.1539959281;
+__auc       =  6681ddad1668f9d340012105520;
+_gid        =  GA1.2.1368686734.1540308147;
+PHPSESSID   =  89arhnestf7vubc5jtbi1qe482;
+__asc       =  6788403e166a18aba01756b7a76;
+iknowmag1k  =  Xr%2BRagAAva6SHTj8SqjY8iEDvU72TU%2F91OvxQEuSMgDMYL6ffuRNMg%3D%3D 
+"
